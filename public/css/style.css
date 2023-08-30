@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #faae17;
+    text-decoration: none;
+}
+.homePageWrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1c1e29;
+    color: white;
+}
+.formWrapper{
+    font-size: .7rem;
+    box-shadow: 1px 1px 5px #faae17,1px -1px 5px 1px #faae17;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+.formWrapper form{
+    display: grid;
+}
+.formWrapper img{
+    height: 5rem;
+}
+.formWrapper form button:hover{
+    box-shadow: 1px 1px 10px gray;
+    border: 1px solid gray;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.formWrapper form button{
+    background-color: #faae17;
+    border: 0;
+    height: 2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    border-radius: .5rem;
+}
+button:disabled {
+    cursor: default;
+    background: #7c5cbf94;
+}
+input::placeholder{
+    font-size: 1rem;
+}
+input{
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0 .3rem;
+    border-radius: .5rem;
+    outline: none;
+}
+label{
+    margin: .3rem 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* Chat Page Layout */
+.chat {
+    display: flex;
+}
+
+.chat__sidebar {
+    height: 100vh;
+    color: white;
+    background: #333744;
+    width: 225px;
+    overflow-y: scroll;
+}
+
+/* Chat styles */
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 24px 24px 0 24px;
+    overflow-y: scroll;
+}
+/*button style*/
+.sendmsg{
+    height: 2rem;
+    background-color: #faae17;
+    border-color: #faae17;
+}
+#send-location{
+    padding: 0 .5rem;
+    font-size: .8rem;
+    background-color: #faae17;
+    border-color: #faae17;
+    border-radius: 1rem;
+}
+/* Message Styles */
+.message {
+    margin-bottom: 16px;
+}
+
+.message__name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.message__meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.message a {
+    color: #0070cc;
+}
+
+
+/* Message Composition Styles */
+.compose {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 16px;
+    padding: 24px;
+    background-color: #1c1e29;
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+.compose input {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    padding: 12px;
+    margin: 0 16px 0 0;
+    flex-grow: 1;
+}
+
+.compose button {
+    font-size: 14px;
+}
+
+
+/* Chat Sidebar Styles */
+.room-title {
+    font-weight: 400;
+    font-size: 32px;
+    background: #2c2f3a;
+    padding: 24px;
+}
+
+.list-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 4px;
+    padding: 12px 24px 0 24px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 12px 24px 0 24px;
+}
+
+
+
+@media (max-width:250px) {
+}
+
+@media (min-width:250px) and (max-width:500px) {
+    /* Mobile View */
+    .formWrapper{
+        padding: 2rem 1rem;
+    }
+    footer{
+        font-size: 1rem;
+    }
+    .chat{
+        flex-direction: column;
+    }
+    .chat__sidebar{
+        height: 16%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .chat__messages{
+        margin-top: 5rem;
+        height: 67vh;
+    }
+    .room-title{
+        padding: .2rem;
+        text-align: center;
+    }
+    .useruser{
+        display: flex;
+        overflow-x: auto;
+        height: 3rem;
+    }
+    .users li{
+        background-color: #faae17;
+        margin: 0 10px;
+        padding: 7px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .users{
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        justify-content: space-evenly;
+        padding: 12px 24px 12px 24px;
+    }
+    .compose{
+        padding: 15px 24px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
